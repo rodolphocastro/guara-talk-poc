@@ -4,7 +4,6 @@ test('should serialize nicely to a json', () => {
     const subject: Principio = {
         nivel: "S",
         conteudo: "bolinho de arroz",
-        identificador: 1,
         validacao: "aaaaaaaaa"
     };
 
