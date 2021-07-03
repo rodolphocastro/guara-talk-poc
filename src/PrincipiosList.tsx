@@ -5,8 +5,11 @@ function PrincipiosList() {
     const [principios, setPrincipios] = useState<Principio[]>([])
 
     useEffect(() => {
-        fetchFromFirebase()
-            .then(result => setPrincipios(result));
+        const loadFromFirebase = async () => {
+            const result = await fetchFromFirebase();
+            setPrincipios(result);
+        }
+        loadFromFirebase();
     }, [])
 
     return (
