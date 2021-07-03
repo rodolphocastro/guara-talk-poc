@@ -1,7 +1,15 @@
 import { useState, useEffect } from "react";
 import { Principio, fetchFromFirebase } from "./Principio";
 
-function PrincipiosList() {
+export function PrincipioListItem(props: Principio) {
+    return (
+        <li>
+            {props.conteudo}
+        </li>
+    )
+}
+
+export default function PrincipiosList() {
     const [principios, setPrincipios] = useState<Principio[]>([])
 
     useEffect(() => {
@@ -24,5 +32,3 @@ function PrincipiosList() {
         </div>
     )
 }
-
-export default PrincipiosList;
