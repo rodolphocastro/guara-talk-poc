@@ -25,7 +25,12 @@ export default function PrincipiosList() {
             <p aria-label="QuantidadePrincipios">{principios.length} Princípios</p>
             <ul>
                 {principios.map(p => (
-                    <li>{p.conteudo}</li>
+                    <PrincipioListItem
+                        key={p.conteudo}
+                        conteudo={p.conteudo}
+                        nivel={p.nivel}
+                        validacao={p.validacao}
+                    />
                 ))
                 }
             </ul>
